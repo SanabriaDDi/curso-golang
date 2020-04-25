@@ -6,9 +6,10 @@ var estado bool
 
 func main() {
 	estado = true
+	// No existen parentesis en validación de if a menos que se deban agrupar datos
 	if estado = false; estado == true {
 		fmt.Println(estado)
-	} else {
+	} else { // No puede haber saltos de linea al iniciar un else
 		fmt.Println("Es falso")
 	}
 
