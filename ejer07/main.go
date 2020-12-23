@@ -4,12 +4,17 @@ package main
 
 import "fmt"
 
+// Declara variable calculo 												var calculo
+// De tipo funcion y recibe 2 datos de tipo entero 							func(int, int) int
+// Devuelve un resultado de tipo entero										int
+// Asigna una función indicando los nombre de las variables y tipos de dato	func(num1 int, num2 int) int
+// Se deben respetar los datos de entrada del tipo de función al volver a definirla
 var calculo func(int, int) int = func(num1 int, num2 int) int {
 	return num1 + num2
 }
 
 func main() {
-	fmt.Printf("Sumo 5 + 7 = %d\n", calculo(7, 7))
+	fmt.Printf("Sumo 5 + 7 = %d\n", calculo(5, 7))
 
 	// Restamos
 	calculo = func(num1 int, num2 int) int { // Reescribe la función
@@ -21,7 +26,7 @@ func main() {
 	calculo = func(num1 int, num2 int) int { // Reescribe la función
 		return num1 / num2
 	}
-	fmt.Printf("Dividimos 12 / 3 = %d\n", calculo(12, 3))
+	fmt.Printf("Dividimos 12 / 3 = %d\n", calculo(12, 5))
 
 	operaciones()
 
@@ -50,11 +55,29 @@ func operaciones() {
 }
 
 // CLOSURES
-func tabla(valor int) func() int {
+// Crea función tabla que recibe un valor y retorna una función
+func tabla(valor int) (retorno func() int) {
 	numero := valor
 	secuencia := 0
-	return func() int {
+
+	if valor == 3 {
+
+		retorno = func() int {
+
+			secuencia--
+			return numero * secuencia
+		}
+	} else {
+
+		retorno = func() int {
+			secuencia++
+			return numero * secuencia
+		}
+	}
+
+	return retorno
+	/*return func() int {
 		secuencia++
 		return numero * secuencia
-	}
+	}*/
 }

@@ -24,7 +24,7 @@ func main() {
 
 	scanner := bufio.NewScanner(os.Stdin) // bufio detecta entradas por teclado, recibe por parametro el estandar input del sistema (os)
 	if scanner.Scan() {                   // Comprueba que lo que se escaneo no dio error
-		leyenda = scanner.Text()
+		leyenda = scanner.Text() // Imprime el resultado del scanner.Text()
 	}
 	resultado = numero2 + numero2
 	fmt.Println(leyenda, resultado)

@@ -36,10 +36,11 @@ func main() {
 	var i int = 0
 
 RUTINA: //Etiqueta
+	fmt.Println("Antes del for")
 	for i < 10 {
 		if i == 4 {
+			fmt.Println("voy a RUTINA sumando 2 a ", i, ": ")
 			i = i + 2
-			fmt.Println("voy a RUTINA sumando 2 a i")
 			goto RUTINA // Regresa a la etiqueta RUTINA, diferente a continue
 		}
 		fmt.Printf("Valor de i: %d\n", i)
