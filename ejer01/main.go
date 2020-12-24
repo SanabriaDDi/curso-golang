@@ -8,7 +8,7 @@ import (
 func main() {
 	//fmt.Println("Hola Mundo")
 
-	var tamanio = 35;
+	var tamanio = 10;
 	c := color.RGB(128,64,0) // color café
 	for i := 0; i<tamanio; i++  {
 		for j := 0; j < tamanio-i; j++ {
