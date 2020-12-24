@@ -23,7 +23,9 @@ func main() {
 	//fmt.Println(matriz)
 
 	variante2()
+	fmt.Println("-----------")
 	variante3()
+	fmt.Println("-----------")
 	variante4()
 }
 
@@ -35,7 +37,7 @@ func variante2() {
 
 func variante3() {
 	elementos := make([]int, 5, 20) // Crea slice con make, pasa el array, el tamaño inicial, y el máximo que podrá tener en memoria
-	fmt.Printf("Largo: %d, Capacidad: %d", len(elementos), cap(elementos))
+	fmt.Printf("Largo: %d, Capacidad: %d\n", len(elementos), cap(elementos))
 }
 
 func variante4() {
@@ -43,5 +45,5 @@ func variante4() {
 	for i := 0; i < 100; i++ {
 		nums = append(nums, i) // La capacidad crece dinámicamente dependiendo de la longitud de los elemetos
 	}
-	fmt.Printf("\n Largo: %d, Capacidad: %d", len(nums), cap(nums))
+	fmt.Printf("Largo: %d, Capacidad: %d", len(nums), cap(nums))
 }

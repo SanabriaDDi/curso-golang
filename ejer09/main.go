@@ -4,7 +4,7 @@ package main
 import "fmt"
 
 func main() {
-	paises := make(map[string]string) // Crea mapa con clave valor
+	paises := make(map[string]string) // Crea mapa con clave tipo string y valor tipo string
 	fmt.Println(paises)
 
 	paises["Mexico"] = "D.F."

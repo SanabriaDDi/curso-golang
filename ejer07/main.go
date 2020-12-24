@@ -75,7 +75,7 @@ func tabla(valor int) (retorno func() int) {
 		}
 	}
 
-	return retorno
+	return
 	/*return func() int {
 		secuencia++
 		return numero * secuencia

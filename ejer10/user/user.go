@@ -1,6 +1,9 @@
 package user
 
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 type Usuario struct {
 	Id        int
@@ -16,4 +19,8 @@ func (this *Usuario) AltaUsuario(id int, nombre string, fechaalta time.Time, sta
 	this.Nombre = nombre
 	this.FechaAlta = fechaalta
 	this.Status = status
+}
+
+func (this *Usuario) ImprimirUsuario() {
+	fmt.Printf("Id: %d, Nombre: %s, Fecha de alta: %s, Status: %t\n", this.Id, this.Nombre, this.FechaAlta, this.Status)
 }
